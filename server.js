@@ -44,6 +44,9 @@ app.get('/about', (req, res) => {
 ] ;
   res.render('about',{title: "About page", description: "Welcome to about us page"} );
 });
+app.get('/partner', (req, res, next) => {
+  res.render('partner', {title: "Partner page", description: "Welcome to partner page"});
+});
 
 app.listen(port, () => {
   console.log(`Runing on port: ${port}`);
