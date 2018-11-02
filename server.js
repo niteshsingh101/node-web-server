@@ -28,7 +28,7 @@ app.use((req, res, next) => {
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', (req, res) => {
-  res.send("Hello world");
+  res.render('home', {title: "Home page", description: "Welcome to home page"});
 });
 app.get('/about', (req, res) => {
   var user =[{
